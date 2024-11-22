@@ -1,0 +1,155 @@
+.featured {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  background-color: #04364a;
+  color: white;
+
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px; // Add padding to the left and right
+    display: flex;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        font-size: 50px;
+
+        i {
+          font-weight: 300;
+        }
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 5px;
+        width: 100%; // Make the search bar full width
+
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-grow: 1; // Allow the input to take the remaining space
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+          }
+
+          input {
+            border: none;
+            outline: none;
+            width: 100%; // Make the input take the full width
+            padding: 10px;
+          }
+        }
+
+        button {
+          width: 120px;
+          height: 50px;
+          border: none;
+          background-color: #176b87;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      .error-message {
+        color: red;
+        margin-top: 10px;
+      }
+
+      .popular {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+        }
+
+        button {
+          color: white;
+          background-color: transparent;
+          border: 1px solid white;
+          padding: 5px 10px;
+          border-radius: 20;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right {
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        width: 80%;
+        margin-left: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .featured .container {
+    flex-direction: column;
+    padding: 0 10px; // Adjust padding for smaller screens
+    text-align: center;
+
+    .left {
+      align-items: center;
+
+      h1 {
+        font-size: 40px; // Adjust font size for smaller screens
+      }
+
+      .search {
+        flex-direction: column;
+        gap: 10px;
+
+        .searchInput {
+          width: 100%;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+
+      .popular {
+        flex-direction: column;
+      }
+    }
+
+    .right {
+      width: 100%;
+
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .featured .container {
+    padding: 0 5px; // Further adjust padding for very small screens
+
+    .left {
+      h1 {
+        font-size: 30px; // Further adjust font size for very small screens
+      }
+    }
+  }
+}

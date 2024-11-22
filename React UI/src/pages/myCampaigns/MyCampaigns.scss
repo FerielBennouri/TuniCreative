@@ -1,0 +1,127 @@
+.myCampaigns {
+  display: flex;
+  justify-content: center;
+  color: #555;
+
+  .container {
+    width: 1400px;
+    padding: 50px 0px;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        width: max-content;
+        margin-bottom: 30px;
+        color: gray;
+        font-weight: 350;
+      }
+      button {
+        background-color: #04364a;
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      tr {
+        height: 60px;
+        th {
+          text-align: left;
+        }
+        td {
+          padding-left: 10px; // Padding for table cells
+          sup {
+            font-size: 12px;
+          }
+
+          .image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+          }
+
+          .delete {
+            width: 20px;
+            cursor: pointer;
+            padding-left: 10px; // Padding for delete button
+          }
+        }
+        &:nth-child(even) {
+          background-color: #109cd41d;
+        }
+      }
+    }
+  }
+}
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 40px; // Increase padding for more space
+  max-width: 300px; // Increase width
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center; // Center content within the modal
+
+  h2,
+  p {
+    color: gray; // Change text color to gray
+    font-size: 18px; // Increase font size
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; // Center buttons within the container
+    gap: 20px; // Add space between buttons
+    margin-top: 20px;
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px; // Increase button font size
+      font-weight: 500; // Increase button font weight
+
+      &:first-child {
+        background-color: red; // Change background color to red
+        color: white;
+      }
+
+      &:last-child {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+.Overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

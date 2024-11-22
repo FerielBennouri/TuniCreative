@@ -1,0 +1,305 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #04364a;
+  color: white;
+  transition: 0.5s all ease;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  &.active {
+    background-color: white;
+    color: black;
+
+    .container {
+      .logo {
+        color: black;
+      }
+      .links {
+        a.link,
+        span {
+          color: black;
+
+          &:hover {
+            color: #27a0c8;
+          }
+        }
+
+        .user {
+          img {
+            border: 1px solid black; // Optional: to make the image border visible on a white background
+          }
+          
+          .options {
+            background-color: white;
+            color: black;
+
+            a.link {
+              color: black;
+
+              &:hover {
+                color: #27a0c8;
+              }
+            }
+          }
+        }
+
+        button {
+          color: black;
+          border: 1px solid black;
+
+          &:hover {
+            background-color: #27a0c8;
+            border-color: #27a0c8;
+            color: white;
+          }
+        }
+
+        .white-text {
+          color: white;
+          border: 1px solid white;
+        }
+      }
+    }
+
+    .menu {
+      background-color: white;
+      a.link {
+        color: black;
+
+        &:hover {
+          color: #27a0c8;
+        }
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      padding-top: 15px;
+      .text {
+        // Existing styles
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+
+      a.link,
+      span {
+        padding: 5px 10px;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .options {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          padding: 20px;
+          background-color: white;
+          border-radius: 10px;
+          border: 1px solid lightgray;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          color: gray;
+          width: 200px;
+          font-weight: 300;
+          z-index: 1000;
+        }
+      }
+
+      button {
+        color: white!important;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        cursor: pointer;
+        background-color: #04364a;
+
+        &:hover {
+          background-color: #27a0c8;
+          border-color: #27a0c8;
+        }
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 0;
+    border: 0.5px solid rgb(228, 227, 227);
+  }
+
+  .menu {
+    width: 100%;
+    max-width: 1400px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: gray;
+    font-family: "Montserrat", sans-serif;
+
+    a.link {
+      padding: 5px 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+
+    .logo {
+      font-size: 20px;
+    }
+
+    .links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+
+      a.link,
+      span {
+        padding: 5px 10px;
+      }
+
+      .user .options {
+        top: 40px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    align-items: center;
+
+    a.link {
+      padding: 5px 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container {
+    padding: 10px;
+
+    .logo {
+      font-size: 18px;
+    }
+
+    .links {
+      gap: 5px;
+
+      a.link,
+      span {
+        padding: 5px 10px;
+      }
+
+      .user .options {
+        width: 150px;
+      }
+    }
+  }
+}
+
+.icon-spacing {
+  margin-right: 8px;
+}
+
+// Confirm Modal Styles
+.confirm-modal {
+  background: white;
+  padding: 30px;
+  max-width: 600px; /* Increased the width */
+  margin: 50px auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  outline: none;
+  text-align: center;
+  color: #616161;
+
+  h2 {
+    margin-bottom: 20px; /* Added space between the title and the question */
+  }
+
+  p {
+    margin-bottom: 30px; /* Added space below the question */
+  }
+}
+
+.confirm-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Add more space between the buttons */
+  margin-top: 20px;
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:first-child {
+      background-color: #1dbf73;
+      color: white;
+    }
+
+    &:last-child {
+      background-color: #ff5a5f;
+      color: white;
+    }
+  }
+}

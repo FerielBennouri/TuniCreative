@@ -1,0 +1,49 @@
+.pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f4f4f4;
+  
+    form {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+  
+      #payment-element {
+        margin-bottom: 1rem;
+      }
+  
+      button {
+        background-color: #04364a;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 1rem;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #176b87;
+        }
+  
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+  
+      #payment-message {
+        margin-top: 1rem;
+        color: red;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+  }
+  
